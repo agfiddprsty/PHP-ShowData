@@ -6,6 +6,7 @@
 </head>
 <body>
 	<section id="input-form">
+	<form action="action.php" method="post">
 	<h1 class="judul">Register</h1>
         <form method="GET" action="index.php">
             <div class="form">
@@ -16,19 +17,9 @@
                 <label>Password</label>
                 <input type="password" name="password">
 			</div>
-			<div class="drpdwn">
+			<div class="form">
                 <label>Level</label>
-                <select>
-                    <option>
-                        Admin
-                    </option>
-                    <option>
-                        User
-                    </option>
-                    <option>
-                        Guest
-                    </option>
-                </select>
+                <input type="text" name="level">
             </div>
 			<div class="form">
                 <label>Fullname</label>
@@ -41,3 +32,4 @@
     </section>
 </body>
 </html>
+

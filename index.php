@@ -1,12 +1,6 @@
 <?php
 
-//host, user, password, nama database
-$link = mysqli_connect('localhost', 'root','', 'php-api');
-
-//menguji error
-if( !$link ){
-    die('ada error' . mysqli_connect_error());
-}
+include('konek.php');
 
 function query($query) {
     global $link;
@@ -25,8 +19,16 @@ $user = query("SELECT * FROM user");
 <html>
 	<head>
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="styleidx.css">
 	</head>
 	<body>
+	<nav>
+        <ul>
+            <li><a href="update.php">EDIT DATA</a></li>
+            <li><a href="delete.php">HAPUS DATA</a></li>
+            <li><a href="login.php">TAMBAH DATA</a></li>
+        </ul>
+    </nav> <br> <br>
 		<table border="1px" cellpadding="10" cellspacing="0">
 	 		<tr>
 	 			<td bgcolor="#ff00fa" align="center">Id</td>
